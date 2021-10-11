@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <meta name="author" content="" />
+        <meta name="description" content="" />
+
+        <title>My portfolio</title>
+
+        <script>
+            document.documentElement.className = "js";
+        </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <link rel="apple-touch-icon" type="image/png" href="images/apple-touch-icon.png" />
+        <link rel="stylesheet" href="css1/bootstrap.min.css" />
+        <link rel="stylesheet" href="css1/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="css1/flag-icon.min.css" />
+        <link rel="stylesheet" href="css1/font-awesome.css" />
+        <link rel="stylesheet" href="css1/layout.css" />
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+
+        <link href="https://fonts.googleapis.com/css?family=poppin:400,400i,700,700i,900|PT+Serif:400,400i,700,700i" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <style type="text/css">
+            footer {
+                background-color: #555;
+                color: white;
+                padding: 15px;
+            }
+            
+            .control {}
+            
+            .hiding {
+                display: none;
+            }
+            
+            .img-dis-sale {
+                max-width: 45px;
+                height: 45px;
+                margin-right: 10px;
+                /* padding-top: 10px; */
+                border-radius: 15px;
+                /* border-top-left-radius: 10px;
+                border-top-right-radius: 10px; */
+                color: #000;
+            }
+            
+            .img-dis-sale1 {
+                max-width: 45px;
+                height: 45px;
+                margin-right: 10px;
+                border-radius: 15px;
+                color: #000;
+            }
+            
+            .img-dis-sale-pic1 {
+                max-width: 90px;
+                height: 70px;
+                margin-right: 10px;
+                border-radius: 20px;
+                color: #000;
+            }
+            
+            .img-dis {
+                margin-top: 15px;
+            }
+            
+            @keyframes animatedBackground {
+                from {
+                    background-position: 100% 0px;
+                }
+                to {
+                    background-position: -10000% 0px;
+                }
+            }
+            
+            .tony1 {
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                margin: 0;
+                padding: 0;
+                background: url(../images2/home-pic1.jpg) no-repeat center;
+                background-size: 99% 98%;
+                background-position: 120% 0px;
+                /* background-repeat: repeat-x; */
+                background-repeat: no-repeat;
+                /* animation: animatedBackground 20s linear infinite; */
+            }
+            
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .tony {
+                min-height: 100%;
+                position: relative;
+                background: url(../images2/home-pic1.jpg) no-repeat center;
+                background-image: url("../images2/home-pic1.jpg");
+                background-size: auto;
+                background-size: cover;
+                padding: 100px 0 300px;
+                overflow: hidden;
+            }
+            
+            .fa {
+                padding: 20px;
+                font-size: 30px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+            }
+            /* Add a hover effect if you want */
+            
+            .fa:hover {
+                opacity: 0.7;
+            }
+            /* Set a specific color for each brand */
+            /* Facebook */
+            
+            .fa-instagram {
+                color: #5a89ab;
+            }
+            
+            .fa-youtube {
+                color: #ff0000;
+            }
+            
+            .fa-twitter {
+                color: #76bcf1;
+            }
+            
+            .card3 {
+                margin-top: 20px;
+                align-content: center;
+                align-self: left;
+                width: 450px;
+                height: auto;
+                padding: 2rem;
+                overflow: hidden;
+                border-radius: 1rem;
+                background: rgba(255, 255, 255, 0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                border-left: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+            
+            .card22 {
+                margin-top: 25px;
+                margin-left: 40px;
+                min-width: 300px;
+                max-width: 600px;
+                height: auto;
+                padding: 1rem;
+                overflow: hidden;
+                border-radius: 1rem;
+                background: rgba(255, 255, 255, 0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                border-left: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(8px);
+            }
+            
+            .card33 {
+                margin-top: 20px;
+                margin-left: 20px;
+                align-content: center;
+                align-self: left;
+                width: 450px;
+                height: auto;
+                padding: 2rem;
+                overflow: hidden;
+                border-radius: 1rem;
+                background: rgba(255, 255, 255, 0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                border-left: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.1);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(0px);
+            }
+            
+            .card2 {
+                margin-top: 25px;
+                margin-left: 20px;
+                width: 300px;
+                height: auto;
+                padding: -1rem;
+                overflow: hidden;
+                border-radius: 1rem;
+                background: rgba(255, 255, 255, 0.5);
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                border-left: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+            
+            .card-title {
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-size: 1.2rem;
+            }
+            
+            p,
+            a {
+                font-size: 1rem;
+            }
+            
+            a {
+                color: #4d4ae8;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="primary">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class=" spining-logo navbar-brand " href="#">
+                        <img style="margin-top: 5px" class="img-responsive flipper img-dis-sale " src="logo3.png" alt="logo" />
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span>
+                            </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="profexp.html">Professional Experience <span
+                                    class="sr-only">(current)</span>
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="trainning.html">Trainning Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projetsoft.html">Software Projects</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="">Programming Blog</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="">Github</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="">Linkedln</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <section class="tony1" style="background-image: url(blog2.jpeg)">
+            <div class="container">
+                <div class="row">
+                    <div data-tilt data-tilt-scale="1" data-tilt-startX="40" data-tilt-startY="-1" class=" card22">
+                        <h2 style="text-align: center; color: #f45116; font-family: Stencil Std fantasy; font-size: 180%" class="card-title">
+                            Idogwu Anthony Chinweuba
+                        </h2>
+
+                        <p style="color: white;font: serif; text-align: center;font-family: Stencil Std fantasy; font-size: 170%">
+                            Technical Trainer/Coach. <br /> Senior Software Engineer at <a style="color: #4d4ae8;
+                            text-decoration: none;
+                            text-decoration-color: white; font-family: Stencil Std fantasy; font-size: 90%" href="https://hardcorebiometric.com">
+                            Hardcore Biometric.</a>
+                        </p>
+
+                        <p style="color: white;font: serif">
+                            I am a full stack developer with more than 15 years of programming experience and more than 7 years in the industry.
+                        </p>
+
+                        <p style="color: white;font: serif">
+                            My primary programming languages are:<span style="color:#f45116;font-family: Stencil Std fantasy; font-size: 130%">
+                            Java,Javascript,Python,Golang and Scala.</span>
+                        </p>
+                        <ul style="font: serif;color: white">
+                            <p style="color: white;font: serif">
+
+                                Below are the links to my Github, Linkedln and programming blog, and various pages describing my experiences and personal software projects.
+                            </p>
+                            <li>
+                                <a href="profexp.html">Professional experience</a>
+                            </li>
+
+                            <li>
+                                <a href="trainning.html">Trainning experience</a>
+                            </li>
+
+                            <li>
+                                <a href="projetsoft.html">Software projects</a>
+                            </li>
+                            <li>
+                                <a href="#">Programming Blog</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Github</a>
+                            </li>
+                            <li>
+                                <a href="#">Linkedln</a>
+                            </li>
+
+                        </ul>
+
+
+
+                    </div>
+
+
+
+
+                    <div style="margin-left:auto; margin-right:0" class="col-lg-5 offset-lg-2 pull-right col-md-5 offset-md-0">
+                        <div data-tilt data-tilt-scale="1" data-tilt-startX="40" data-tilt-startY="-0" class=" card33">
+                            <div>
+
+                                <h2 style="color: #f45116; text-align: left; font-family: Stencil Std fantasy; font-size: 35px" class="card-title">
+                                    <img class="img-dis-sale-pic1" src="tony.jpg" alt="logo" style="margin-left: 0%" /> Idogwu Anthony C.
+
+                                </h2>
+
+                                <h4 style="
+                                  color: #f45116;
+                                  text-align: center;
+                                  font-family: Stencil Std fantasy">
+                                    Phone: +234 8060229451 , +234 7017176647<br></br>
+                                    Email: chinwe221@gmail.com, tonychinwe90@gmail.com
+                                </h4>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <ul class="lnks text-lg-left text-md-center text-sm-center"></ul>
+                    </div>
+                    <div class="col-lg-1 offset-lg-5 col-md-12 offset-md-0 col-sm-12 text-right footer-logo">
+                        <div class="loader img-dis">
+                            <div class="flipper">
+                                <div class="front">
+                                    <a href="#" class="spining-logo "><img style="border-radius: 10px" src="logo3.png" alt="" class="img-responsive" /></a>
+                                </div>
+                                <div class="back">
+                                    <a href="#" style="border-radius: 10px" class="spining-logo"><img style="border-radius: 10px" src="logo3.png" alt="" class="img-responsive" /></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 main">
+                        <span class="copy">© copyright 2021 Phi-Soft. </span>
+                        <ul class="float-right socials">
+                            <li>
+                                <a href="" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="" class="fa fa-youtube"></a>
+                            </li>
+                            <li>
+                                <a href="" class="fa fa-instagram"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-migrate.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".card"), {
+                max: 25,
+                speed: 400
+            });
+
+            //It also supports NodeList
+            VanillaTilt.init(document.querySelectorAll(".card"));
+
+            VanillaTilt.init(document.querySelector(".card2"), {
+                max: 25,
+                speed: 400
+            });
+
+            //It also supports NodeList
+            VanillaTilt.init(document.querySelectorAll(".card2"));
+        </script>
+    </body>
+
+</html>
